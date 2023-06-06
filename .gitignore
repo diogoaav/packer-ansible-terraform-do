@@ -1,0 +1,5 @@
+variables.auto.pkrvars.hcl
+*.tfstate*
+*.tfvars
+inventory.ini
+*.lock.*
