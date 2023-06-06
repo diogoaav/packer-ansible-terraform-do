@@ -27,7 +27,7 @@ git clone https://github.com/diogoaav/packer-ansible-terraform-do.git
 Enter the terraform-db directory and create a terraform.tfvars file and include your DO token:
 
 ```sh
-cd terraform-db
+cd packer-ansible-terraform-do/terraform-db
 export DIGITALOCEAN_TOKEN="YOUR_DO_TOKEN"
 ```
 
@@ -115,4 +115,16 @@ Execute terraform:
 ```sh
 terraform init
 terraform apply -var "do_token=${DIGITALOCEAN_TOKEN}"
+```
+
+4- Teardown instructions
+---------------------
+
+```sh
+terraform destroy -var "do_token=${DIGITALOCEAN_TOKEN}"
+```
+
+```sh
+cd ../terraform-db
+terraform destroy -var "do_token=${DIGITALOCEAN_TOKEN}"
 ```
